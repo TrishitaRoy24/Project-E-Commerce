@@ -1,0 +1,51 @@
+<div class="container">
+    <section class="cmspage mtb-40">
+        <div class="card mt-2">
+            <div class="card-body ">
+                <div id="carouselExampleAutoplaying" class="carousel slide align-items-center justify-content-center" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="assets/home1.png" class="d-block w-100 h-20" alt="Can't load image">
+                      </div>
+                      <div class="carousel-item active" data-bs-interval="2000">
+                        <img src="assets/home2.png" class="d-block w-100 h-20" alt="Can't load image">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-header"><h5>Featured Products</h5></div>
+            <div class="card-body">
+                <div class="row">
+                    <ng-container *ngIf="featuredProduct!=undefined && featuredProduct.length>0; else loader">
+                        <div class="col-4 d-flex  align-items-stretch mt-10" *ngFor="let item of featuredProduct">
+                            <div class="card mt-10" >
+                                <img class="card-img-top" height="40%"   [src]="item.image" alt="Oops! Something went wrong.">
+
+                                <div class="card-body">
+                                    <h5 class="card-title text-capitalize">{{item.title}}</h5>
+                                    <h6 class="text-capitalize">{{item.category}}</h6>
+                                    <p class="card-text">{{item.description}}</p>
+                                </div>
+                                <div class="card-footer">USD {{item.price|currency: ''}}</div>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <ng-template #loader>
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border text-info" role="status"></div>
+                        </div>
+                    </ng-template>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-header"><h5>Top Selling Products</h5></div>
+            <div class="card-body">
+
+            </div>
+        </div>
+    </section>
+</div>
