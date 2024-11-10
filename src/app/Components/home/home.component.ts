@@ -21,8 +21,7 @@ export class HomeComponent implements OnInit {
 
   fetchFeaturedProduct(){
     this.commonService.getFeaturedProduct().subscribe((d:any)=>{
-      this.featuredProduct=d;
-      console.log(this.featuredProduct);
+      this.featuredProduct = d;     
       
     });
   }
