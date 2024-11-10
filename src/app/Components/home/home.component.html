@@ -21,14 +21,21 @@
                     <ng-container *ngIf="featuredProduct!=undefined && featuredProduct.length>0; else loader">
                         <div class="col-4 d-flex  align-items-stretch mt-10" *ngFor="let item of featuredProduct">
                             <div class="card mt-10" >
-                                <img class="card-img-top" height="40%"   [src]="item.image" alt="Oops! Something went wrong.">
-
+                                
+                                
                                 <div class="card-body">
-                                    <h5 class="card-title text-capitalize">{{item.title}}</h5>
-                                    <h6 class="text-capitalize">{{item.category}}</h6>
-                                    <p class="card-text">{{item.description}}</p>
+                                    <div class="pd-30">
+                                        <img class="card-img-top " height="40%"   [src]="item.image" alt="Oops! Something went wrong.">
+    
+                                    </div>
+                                    <div class="mt-20">
+                                        <h5 class="card-title text-capitalize ">{{item.title}}</h5>
+                                        <h6 class="text-capitalize">{{item.category}}</h6>
+                                        <p class="card-text">{{item.description}}</p>
+                                    </div>
+                                    
                                 </div>
-                                <div class="card-footer">USD {{item.price|currency: ''}}</div>
+                                <div class="card-footer">{{item.price|currency}}</div>
                             </div>
                         </div>
                     </ng-container>
