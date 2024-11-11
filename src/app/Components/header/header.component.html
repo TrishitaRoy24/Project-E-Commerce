@@ -1,17 +1,14 @@
 <header class="p-1 bg-info text-dark">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-
-            <img src="/src/assets/logo.png" alt="Oops!" width="60" height="50">
-
+            <img src="assets/logo.png" alt="Oops!" width="60" height="50">
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <li><a routerLink="/home"  class="nav-link px-2 text-dark">Home</a></li> 
+                <li><a class="nav-link px-2 text-dark pointer" (click)="pathClicked('home')" >Home</a></li> 
                 <!-- <li><a  class="nav-link px-2 text-dark">Categories</a></li> -->
-                <li><a routerLink="/products"  class="nav-link px-2 text-dark">Products</a></li>
+                <li><a class="nav-link px-2 text-dark pointer" (click)="pathClicked('products')" >Products</a></li>
             </ul>
-
             <div class="text-end">
-                <!-- <button type="button" class="btn btn-outline-light me-2">Login</button> -->
+                <button type="button" class="btn btn-light me-2">Login</button>
                 <button type="button" class="btn btn-warning">Sign-up</button>
             </div>
         </div>
